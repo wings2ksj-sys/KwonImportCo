@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Import Co — Korea import sourcing</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-sans); color: var(--text-primary); background: var(--surface-0); }
+    
+    .header { background: var(--surface-2); border-bottom: 0.5px solid var(--border); padding: 1.5rem; text-align: center; }
+    .logo { font-size: 18px; font-weight: 500; letter-spacing: 0.5px; }
+    
+    .hero { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-1) 100%); }
+    .hero h1 { font-size: 42px; font-weight: 500; margin-bottom: 1rem; line-height: 1.2; color: var(--text-primary); }
+    .hero p { font-size: 18px; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    
+    .section { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .section h2 { font-size: 28px; font-weight: 500; margin-bottom: 1.5rem; text-align: center; }
+    
+    .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+    .value-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 2rem; text-align: center; }
+    .value-icon { font-size: 32px; margin-bottom: 1rem; display: block; }
+    .value-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 0.75rem; }
+    .value-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+    
+    .process-section { background: var(--surface-1); padding: 3rem 2rem; }
+    .process-steps { display: flex; justify-content: space-between; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+    .step { flex: 1; min-width: 160px; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--fill-warning); color: var(--on-warning); border-radius: 50%; font-weight: 500; margin-bottom: 1rem; }
+    .step h4 { font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; }
+    .step p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+    
+    .about-section { background: var(--surface-2); padding: 3rem 2rem; }
+    .about-content { max-width: 700px; margin: 0 auto; }
+    .about-content h3 { font-size: 18px; font-weight: 500; margin-bottom: 1rem; }
+    .about-content p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+    
+    .contact-section { background: var(--fill-warning); color: var(--on-warning); padding: 4rem 2rem; text-align: center; }
+    .contact-section h2 { color: var(--on-warning); margin-bottom: 1rem; }
+    .contact-section p { font-size: 16px; margin-bottom: 2rem; opacity: 0.95; }
+    .contact-form { max-width: 500px; margin: 0 auto; }
+    .form-group { margin-bottom: 1.5rem; text-align: left; }
+    .form-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; color: var(--on-warning); }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid rgba(0,0,0,0.2); border-radius: var(--radius); font-family: inherit; font-size: 15px; background: rgba(255,255,255,0.9); color: var(--text-primary); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .submit-btn { background: var(--on-warning); color: var(--fill-warning); padding: 0.75rem 2rem; border: none; border-radius: var(--radius); font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+    .submit-btn:hover { opacity: 0.9; transform: scale(1.02); }
+    
+    .footer { background: var(--surface-2); border-top: 0.5px solid var(--border); padding: 2rem; text-align: center; font-size: 13px; color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">K Import Co</div>
+</div>
+
+<div class="hero">
+  <h1>Korea imports made simple</h1>
+  <p>Vetted suppliers, clear costs, zero surprises. We handle the regulatory complexity so you can focus on your business.</p>
+</div>
+
+<div class="section">
+  <h2>What we do</h2>
+  <div class="value-grid">
+    <div class="value-card">
+      <span class="value-icon"><i class="ti ti-search" aria-hidden="true"></i></span>
+      <h3>Supplier screening</h3>
+      <p>We find and vet Korean suppliers who meet your exact requirements, safety standards, and compliance needs.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon"><i class="ti ti-certificate" aria-hidden="true"></i></span>
+      <h3>Regulatory clarity</h3>
+      <p>HS classification, tariff analysis, SFC compliance, phytosanitary requirements—we handle the regulatory maze.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon"><i class="ti ti-calculator" aria-hidden="true"></i></span>
+      <h3>Landed cost analysis</h3>
+      <p>Know exactly what your imports will cost. Duty rates, freight, compliance buffers, all calculated upfront.</p>
+    </div>
+  </div>
+</div>
+
+<div class="process-section">
+  <div class="section">
+    <h2>How it works</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>You tell us</h4>
+        <p>Product, volume, budget, timeline. We ask clarifying questions.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>We research</h4>
+        <p>Supplier search, regulatory screening, tariff lookup, cost calculation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>You get a report</h4>
+        <p>Ranked suppliers, compliance risk assessment, landed cost breakdown, our recommendation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>You decide</h4>
+        <p>Armed with solid data, you choose which supplier to work with.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-section">
+  <div class="about-content">
+    <h2 style="text-align: center; margin-bottom: 2rem;">About</h2>
+    <h3>Why K Import Co?</h3>
+    <p>We specialize in Korea imports because it's what we know. With seven years of trade compliance expertise and deep understanding of HS classification, tariff strategy, and regulatory frameworks, we've built workflows that turn supply chain complexity into clear, actionable insights.</p>
+    <p>Most importers either waste time on research or overpay for middlemen. We give you the middle ground—professional-grade analysis without the agency overhead. You get the data, you make the choice, and you keep the margin.</p>
+    <p>Whether you're scaling a meal-prep business, sourcing for a restaurant, or launching a brand, we help you build a supply chain that works.</p>
+  </div>
+</div>
+
+<div class="contact-section">
+  <h2>Get in touch</h2>
+  <p>Tell us about your import needs. We'll get back to you within 24 hours.</p>
+  <form class="contact-form" onsubmit="handleSubmit(event)">
+    <div class="form-group">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="product">Product you want to import</label>
+      <input type="text" id="product" name="product" placeholder="e.g., gochujang, kimchi, dried seaweed" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Tell us more (budget, timeline, volume, questions)</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send</button>
+  </form>
+</div>
+
+<div class="footer">
+  <p>K Import Co • Korea import sourcing • Built with AI, powered by Cowork</p>
+</div>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const product = document.getElementById('product').value;
+  const message = document.getElementById('message').value;
+  
+  const subject = `K Import Co Inquiry from ${name}`;
+  const body = `Name: ${name}\nEmail: ${email}\n\nProduct: ${product}\n\nMessage:\n${message}`;
+  
+  const mailtoLink = `mailto:hello@kwonimportco.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoLink;
+}
+</script>
+
+</body>
+</html>
