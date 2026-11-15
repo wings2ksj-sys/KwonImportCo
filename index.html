@@ -3,165 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K Import Co — Korea import sourcing</title>
+  <title>Kwon Import Co — Korea import sourcing</title>
+  <meta name="description" content="Kwon Import Co helps businesses import from Korea: vetted suppliers, HS classification and regulatory screening, and full landed cost analysis.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kwon Import Co — Korea imports made simple">
+  <meta property="og:description" content="Vetted Korean suppliers, regulatory clarity, and landed cost analysis — so you can import with confidence.">
+  <meta name="theme-color" content="#1E3A5F">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E3A5F'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23F6F1E7'%3EK%3C/text%3E%3Crect x='14' y='52' width='36' height='4' rx='2' fill='%23E07A3F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
   <style>
+    /* Palette inspired by obangsaek (오방색), the five traditional Korean colours,
+       set on a hanji-paper background with a modern persimmon accent. */
+    :root {
+      --hanji: #F6F1E7;          /* white (백) — mulberry-paper background */
+      --hanji-deep: #EDE4D3;     /* alternate section background */
+      --card: #FFFDF8;
+      --ink: #1F1C19;            /* black (흑) — ink text */
+      --ink-soft: #5A534B;       /* secondary text */
+      --cheong: #1E3A5F;         /* blue (청) — deep indigo */
+      --cheong-deep: #142A47;
+      --jeok: #B5352B;           /* red (적) — dancheong red */
+      --hwang: #D9A441;          /* yellow (황) — ochre */
+      --jade: #4F7A6A;           /* celadon green */
+      --accent: #E07A3F;         /* modern warm accent — persimmon (감) */
+      --accent-hover: #C8652C;
+      --border: #DDD2BE;
+      --radius: 10px;
+      --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --font-serif: "Noto Serif KR", Georgia, "Times New Roman", serif;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: var(--font-sans); color: var(--text-primary); background: var(--surface-0); }
-    
-    .header { background: var(--surface-2); border-bottom: 0.5px solid var(--border); padding: 1.5rem; text-align: center; }
-    .logo { font-size: 18px; font-weight: 500; letter-spacing: 0.5px; }
-    
-    .hero { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, var(--surface-2) 0%, var(--surface-1) 100%); }
-    .hero h1 { font-size: 42px; font-weight: 500; margin-bottom: 1rem; line-height: 1.2; color: var(--text-primary); }
-    .hero p { font-size: 18px; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
-    
-    .section { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
-    .section h2 { font-size: 28px; font-weight: 500; margin-bottom: 1.5rem; text-align: center; }
-    
-    .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
-    .value-card { background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 2rem; text-align: center; }
-    .value-icon { font-size: 32px; margin-bottom: 1rem; display: block; }
-    .value-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 0.75rem; }
-    .value-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
-    
-    .process-section { background: var(--surface-1); padding: 3rem 2rem; }
-    .process-steps { display: flex; justify-content: space-between; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
-    .step { flex: 1; min-width: 160px; }
-    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--fill-warning); color: var(--on-warning); border-radius: 50%; font-weight: 500; margin-bottom: 1rem; }
-    .step h4 { font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; }
-    .step p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-    
-    .about-section { background: var(--surface-2); padding: 3rem 2rem; }
-    .about-content { max-width: 700px; margin: 0 auto; }
-    .about-content h3 { font-size: 18px; font-weight: 500; margin-bottom: 1rem; }
-    .about-content p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem; }
-    
-    .contact-section { background: var(--fill-warning); color: var(--on-warning); padding: 4rem 2rem; text-align: center; }
-    .contact-section h2 { color: var(--on-warning); margin-bottom: 1rem; }
-    .contact-section p { font-size: 16px; margin-bottom: 2rem; opacity: 0.95; }
-    .contact-form { max-width: 500px; margin: 0 auto; }
-    .form-group { margin-bottom: 1.5rem; text-align: left; }
-    .form-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 0.5rem; color: var(--on-warning); }
-    .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid rgba(0,0,0,0.2); border-radius: var(--radius); font-family: inherit; font-size: 15px; background: rgba(255,255,255,0.9); color: var(--text-primary); }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .submit-btn { background: var(--on-warning); color: var(--fill-warning); padding: 0.75rem 2rem; border: none; border-radius: var(--radius); font-size: 15px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
-    .submit-btn:hover { opacity: 0.9; transform: scale(1.02); }
-    
-    .footer { background: var(--surface-2); border-top: 0.5px solid var(--border); padding: 2rem; text-align: center; font-size: 13px; color: var(--text-secondary); }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); color: var(--ink); background: var(--hanji); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; color: var(--ink); }
+    a { color: inherit; }
+
+    /* Obangsaek stripe */
+    .stripe { display: flex; height: 6px; }
+    .stripe span { flex: 1; }
+
+    .header { background: var(--hanji); border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; }
+    .header-inner { max-width: 1040px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .logo { font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: var(--cheong); text-decoration: none; letter-spacing: 0.2px; }
+    .logo small { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-soft); }
+    .header-cta { background: var(--accent); color: #fff; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 999px; font-size: 14px; font-weight: 600; transition: background 0.2s; white-space: nowrap; }
+    .header-cta:hover { background: var(--accent-hover); }
+
+    .hero { padding: clamp(3.5rem, 9vw, 6.5rem) 1.5rem; text-align: center; background:
+      radial-gradient(circle at 85% 15%, rgba(224,122,63,0.14), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(30,58,95,0.10), transparent 50%),
+      var(--hanji); }
+    .eyebrow { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: var(--jeok); margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.15; margin-bottom: 1.25rem; color: var(--cheong-deep); }
+    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero p { font-size: clamp(16px, 2.2vw, 19px); color: var(--ink-soft); max-width: 620px; margin: 0 auto 2rem; }
+    .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 0.85rem 1.8rem; border-radius: 999px; font-weight: 600; font-size: 15px; border: none; cursor: pointer; font-family: inherit; transition: background 0.2s, transform 0.2s; }
+    .btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+    .btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+
+    .section { max-width: 1040px; margin: 0 auto; padding: clamp(3rem, 7vw, 5rem) 1.5rem; }
+    .section h2 { font-size: clamp(26px, 4vw, 34px); margin-bottom: 0.5rem; text-align: center; color: var(--cheong-deep); }
+    .section-lead { text-align: center; color: var(--ink-soft); max-width: 560px; margin: 0 auto 2.5rem; }
+
+    .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .value-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem 1.75rem; border-top: 4px solid var(--c, var(--cheong)); }
+    .value-icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 1.1rem; background: color-mix(in srgb, var(--c, var(--cheong)) 12%, transparent); color: var(--c, var(--cheong)); }
+    .value-icon svg { width: 26px; height: 26px; }
+    .value-card h3 { font-size: 19px; margin-bottom: 0.6rem; }
+    .value-card p { font-size: 15px; color: var(--ink-soft); }
+
+    .process-section { background: var(--hanji-deep); }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; counter-reset: step; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: var(--cheong); color: var(--hanji); border-radius: 50%; font-family: var(--font-serif); font-weight: 700; font-size: 18px; margin-bottom: 1rem; box-shadow: 0 0 0 4px var(--hanji-deep), 0 0 0 5px var(--accent); }
+    .step h3 { font-size: 17px; margin-bottom: 0.4rem; }
+    .step p { font-size: 14.5px; color: var(--ink-soft); }
+
+    .about-content { max-width: 720px; margin: 0 auto; }
+    .about-content h3 { font-size: 20px; margin-bottom: 1rem; color: var(--jeok); }
+    .about-content p { font-size: 16px; color: var(--ink-soft); margin-bottom: 1rem; }
+
+    .contact-section { background: var(--cheong); color: var(--hanji); position: relative; }
+    .contact-section::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--accent); }
+    .contact-section h2 { color: var(--hanji); }
+    .contact-section .section-lead { color: rgba(246,241,231,0.85); }
+    .contact-form { max-width: 540px; margin: 0 auto; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 0.4rem; color: var(--hanji); }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.8rem 0.9rem; border: 1px solid transparent; border-radius: var(--radius); font-family: inherit; font-size: 15px; background: var(--hanji); color: var(--ink); }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(224,122,63,0.35); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-actions { text-align: center; margin-top: 1.5rem; }
+    .form-status { margin-top: 1rem; font-size: 15px; min-height: 1.5em; }
+    .form-status.ok { color: #F4C9A8; }
+    .form-status.err { color: #FFB4A8; }
+    .hp { position: absolute; left: -9999px; }
+
+    .footer { background: var(--cheong-deep); color: rgba(246,241,231,0.7); padding: 2rem 1.5rem; text-align: center; font-size: 14px; }
+    .footer a { color: var(--hanji); }
+
+    @media (max-width: 520px) {
+      .logo small { display: none; }
+    }
   </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="logo">K Import Co</div>
+<div class="stripe" aria-hidden="true">
+  <span style="background: var(--cheong)"></span>
+  <span style="background: var(--jeok)"></span>
+  <span style="background: var(--hwang)"></span>
+  <span style="background: var(--hanji-deep)"></span>
+  <span style="background: var(--ink)"></span>
 </div>
 
-<div class="hero">
-  <h1>Korea imports made simple</h1>
-  <p>Vetted suppliers, clear costs, zero surprises. We handle the regulatory complexity so you can focus on your business.</p>
-</div>
-
-<div class="section">
-  <h2>What we do</h2>
-  <div class="value-grid">
-    <div class="value-card">
-      <span class="value-icon"><i class="ti ti-search" aria-hidden="true"></i></span>
-      <h3>Supplier screening</h3>
-      <p>We find and vet Korean suppliers who meet your exact requirements, safety standards, and compliance needs.</p>
-    </div>
-    <div class="value-card">
-      <span class="value-icon"><i class="ti ti-certificate" aria-hidden="true"></i></span>
-      <h3>Regulatory clarity</h3>
-      <p>HS classification, tariff analysis, SFC compliance, phytosanitary requirements—we handle the regulatory maze.</p>
-    </div>
-    <div class="value-card">
-      <span class="value-icon"><i class="ti ti-calculator" aria-hidden="true"></i></span>
-      <h3>Landed cost analysis</h3>
-      <p>Know exactly what your imports will cost. Duty rates, freight, compliance buffers, all calculated upfront.</p>
-    </div>
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="#">Kwon Import Co<small>Korea import sourcing</small></a>
+    <a class="header-cta" href="#contact">Get a quote</a>
   </div>
-</div>
+</header>
 
-<div class="process-section">
-  <div class="section">
-    <h2>How it works</h2>
-    <div class="process-steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>You tell us</h4>
-        <p>Product, volume, budget, timeline. We ask clarifying questions.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>We research</h4>
-        <p>Supplier search, regulatory screening, tariff lookup, cost calculation.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h4>You get a report</h4>
-        <p>Ranked suppliers, compliance risk assessment, landed cost breakdown, our recommendation.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h4>You decide</h4>
-        <p>Armed with solid data, you choose which supplier to work with.</p>
-      </div>
-    </div>
-  </div>
-</div>
+<main>
+  <section class="hero">
+    <span class="eyebrow">Korea → Canada import sourcing</span>
+    <h1>Korea imports, <em>made simple</em></h1>
+    <p>Vetted suppliers, clear costs, zero surprises. We handle the regulatory complexity so you can focus on your business.</p>
+    <a class="btn" href="#contact">Tell us what you need</a>
+  </section>
 
-<div class="about-section">
-  <div class="about-content">
-    <h2 style="text-align: center; margin-bottom: 2rem;">About</h2>
-    <h3>Why K Import Co?</h3>
-    <p>We specialize in Korea imports because it's what we know. With seven years of trade compliance expertise and deep understanding of HS classification, tariff strategy, and regulatory frameworks, we've built workflows that turn supply chain complexity into clear, actionable insights.</p>
-    <p>Most importers either waste time on research or overpay for middlemen. We give you the middle ground—professional-grade analysis without the agency overhead. You get the data, you make the choice, and you keep the margin.</p>
-    <p>Whether you're scaling a meal-prep business, sourcing for a restaurant, or launching a brand, we help you build a supply chain that works.</p>
-  </div>
-</div>
+  <section class="section" id="services">
+    <h2>What we do</h2>
+    <p class="section-lead">Everything you need to decide on a Korean supplier, in one clear report.</p>
+    <div class="value-grid">
+      <div class="value-card" style="--c: var(--cheong)">
+        <div class="value-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </div>
+        <h3>Supplier screening</h3>
+        <p>We find and vet Korean suppliers who meet your exact requirements, safety standards, and compliance needs.</p>
+      </div>
+      <div class="value-card" style="--c: var(--jeok)">
+        <div class="value-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5"/><path d="M14 3v5h5"/><path d="M19 8v3"/><circle cx="17" cy="16" r="3"/><path d="m15.5 18.5-1 3.5 2.5-1 2.5 1-1-3.5"/><path d="M8 9h3M8 13h4"/></svg>
+        </div>
+        <h3>Regulatory clarity</h3>
+        <p>HS classification, tariff analysis, SFC compliance, phytosanitary requirements — we handle the regulatory maze.</p>
+      </div>
+      <div class="value-card" style="--c: var(--accent)">
+        <div class="value-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 11h.01M12 11h.01M16 11h.01M8 14.5h.01M12 14.5h.01M16 14.5h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+        </div>
+        <h3>Landed cost analysis</h3>
+        <p>Know exactly what your imports will cost. Duty rates, freight, compliance buffers — all calculated upfront.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="contact-section">
-  <h2>Get in touch</h2>
-  <p>Tell us about your import needs. We'll get back to you within 24 hours.</p>
-  <form class="contact-form" onsubmit="handleSubmit(event)">
-    <div class="form-group">
-      <label for="name">Your name</label>
-      <input type="text" id="name" name="name" required>
+  <section class="process-section">
+    <div class="section">
+      <h2>How it works</h2>
+      <p class="section-lead">Four steps from idea to a supplier decision you can stand behind.</p>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>You tell us</h3>
+          <p>Product, volume, budget, timeline. We ask clarifying questions.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>We research</h3>
+          <p>Supplier search, regulatory screening, tariff lookup, cost calculation.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>You get a report</h3>
+          <p>Ranked suppliers, compliance risk assessment, landed cost breakdown, and our recommendation.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>You decide</h3>
+          <p>Armed with solid data, you choose which supplier to work with.</p>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    <div class="form-group">
-      <label for="product">Product you want to import</label>
-      <input type="text" id="product" name="product" placeholder="e.g., gochujang, kimchi, dried seaweed" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Tell us more (budget, timeline, volume, questions)</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit" class="submit-btn">Send</button>
-  </form>
-</div>
+  </section>
 
-<div class="footer">
-  <p>K Import Co • Korea import sourcing • Built with AI, powered by Cowork</p>
-</div>
+  <section class="section" id="about">
+    <div class="about-content">
+      <h2>About</h2>
+      <p class="section-lead">Specialists, not generalists.</p>
+      <h3>Why Kwon Import Co?</h3>
+      <p>We specialize in Korea imports because it's what we know. With seven years of trade compliance expertise and deep understanding of HS classification, tariff strategy, and regulatory frameworks, we've built workflows that turn supply chain complexity into clear, actionable insights.</p>
+      <p>Most importers either waste time on research or overpay for middlemen. We give you the middle ground — professional-grade analysis without the agency overhead. You get the data, you make the choice, and you keep the margin.</p>
+      <p>Whether you're scaling a meal-prep business, sourcing for a restaurant, or launching a brand, we help you build a supply chain that works.</p>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="section">
+      <h2>Get in touch</h2>
+      <p class="section-lead">Tell us about your import needs. We'll get back to you within 24 hours.</p>
+      <!-- FORMSPREE: replace YOUR_FORM_ID below with the ID from your Formspree form (e.g. "xyzabcd"). -->
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New Kwon Import Co inquiry">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label for="product">Product you want to import</label>
+          <input type="text" id="product" name="product" placeholder="e.g., gochujang, kimchi, dried seaweed" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us more (budget, timeline, volume, questions)</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send inquiry</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year">2026</span> Kwon Import Co · Korea import sourcing · <a href="mailto:hello@kwonimportco.ca">hello@kwonimportco.ca</a></p>
+</footer>
 
 <script>
-function handleSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const product = document.getElementById('product').value;
-  const message = document.getElementById('message').value;
-  
-  const subject = `K Import Co Inquiry from ${name}`;
-  const body = `Name: ${name}\nEmail: ${email}\n\nProduct: ${product}\n\nMessage:\n${message}`;
-  
-  const mailtoLink = `mailto:hello@kwonimportco.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  window.location.href = mailtoLink;
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const CONTACT_EMAIL = 'hello@kwonimportco.ca';
+const form = document.getElementById('contact-form');
+const statusEl = document.getElementById('form-status');
+
+function mailtoFallback(data) {
+  const subject = `Kwon Import Co inquiry from ${data.get('name')}`;
+  const body = `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\nProduct: ${data.get('product')}\n\nMessage:\n${data.get('message')}`;
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  // Until a real Formspree ID is set, fall back to opening the visitor's email app.
+  if (form.action.includes('YOUR_FORM_ID')) { mailtoFallback(data); return; }
+
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  statusEl.className = 'form-status';
+  statusEl.textContent = 'Sending…';
+  try {
+    const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+    if (!res.ok) throw new Error(res.status);
+    form.reset();
+    statusEl.className = 'form-status ok';
+    statusEl.textContent = "Thanks — we've received your inquiry and will reply within 24 hours.";
+  } catch (err) {
+    statusEl.className = 'form-status err';
+    statusEl.innerHTML = `Sorry, something went wrong. Please email us directly at <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>.`;
+  } finally {
+    btn.disabled = false;
+  }
+});
 </script>
 
 </body>
